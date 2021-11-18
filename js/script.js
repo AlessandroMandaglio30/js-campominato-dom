@@ -26,7 +26,7 @@ function play() {
             cellForSide = 7;
     }
 
-    const bombe = generateBombe();
+
 
     function generateBombe() {
         const arraybombe = [];
@@ -38,6 +38,34 @@ function play() {
             }
         }
         return arraybombe;
+
+
+    }
+
+
+    function inserisciBombe() {
+        const quadratiArray = document.getElementsByClassName("square");
+        const bombe = generateBombe();
+        console.log(bombe);
+        for (let i = 0; i < bombe.length; i++) {
+            const bomba = bombe[i];
+            console.log(bomba);
+            quadratiArray[bomba].classList.add("bomb");
+
+        }
+    }
+
+    function clickQuadrato() {
+        const quadratiArray = document.getElementsByClassName("square");
+        for (let i = 0; i < quadratiArray.length; i++) {
+            quadratiArray[i].addEventListener('click', function () {
+                if (this.classList.contains('bomb')) {
+                    this.classList.add("clicked-gameover");
+                } else {
+                    this.classList.add("clicked");
+                }
+            })
+        }
 
     }
 
@@ -54,11 +82,10 @@ function play() {
             cella.style.width = size;
             cella.style.height = size;
             box.appendChild(cella);
-
-            cella.addEventListener('click', function () {
-                this.classList.add("clicked")
-            })
         }
+        inserisciBombe();
+        clickQuadrato();
 
     }
+
 }
