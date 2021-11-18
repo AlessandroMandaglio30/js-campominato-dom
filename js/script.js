@@ -54,13 +54,13 @@ function play() {
 
         }
     }
-
     function clickQuadrato() {
         const quadratiArray = document.getElementsByClassName("square");
         for (let i = 0; i < quadratiArray.length; i++) {
             quadratiArray[i].addEventListener('click', function () {
                 if (this.classList.contains('bomb')) {
                     this.classList.add("clicked-gameover");
+                    alert('Ha vinto Freezer')
                 } else {
                     this.classList.add("clicked");
                 }

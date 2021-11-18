@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background-color: aquamarine;
+    background-image: url(../img/DRAGON-BALL-Z-KAKAROT-recensione-ps4-cover.jpg);
+    background-size:cover;
 }
 .nav-bar{
     display: flex;
     justify-content: space-between;
     height: 10vh;
 }
-
+img{
+    height: 50px;
+}
 .left,
 .right{
     display: flex;
@@ -40,6 +43,15 @@ main{
     flex-wrap: wrap;
 }
 
+h2{
+    font-size: 30px;
+    margin: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: mediumaquamarine;
+}
+
 footer{
     padding: 10px;
     height: 10vh;
@@ -63,5 +75,6 @@ footer{
 }
 
 .clicked-gameover{
-background-color: red;
+background-image: url(../img/s-l300.jpg);
+background-size: cover
 }
